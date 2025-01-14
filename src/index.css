@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "bold";
+    src: url(./components/fonts/Fontspring-DEMO-integralcf-boldoblique.otf) format("opentype");
+}
+.integral{
+    font-family: "bold";
+}
