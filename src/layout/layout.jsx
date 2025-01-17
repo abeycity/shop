@@ -4,8 +4,8 @@ import AppRoute from "./route"
 
 const Routelayout = () => {
   return (
-    <div className=" bg-[F2F0F1] flex justify-center items-center  w-full ">
-        <div className="max-w-screen-2xl flex-col items-start ">
+    <div className=" bg-[F2F0F1] flex justify-center items-center  w-full overflow-hidden">
+        <div className=" max-w-screen-2xl flex-col items-center ">
           <Navbar/>
           <AppRoute/>
           <Footer/>

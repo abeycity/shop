@@ -8,7 +8,7 @@ export const
     count: 4,
     price: 130,
     discount: 160,
-    percentage: -30,
+    percentage: 30,
   },
   newArrival2: {
     img: arrival2Img,
@@ -20,9 +20,9 @@ export const
     img: arrival3Img,
     title: "Skinny Fit jeans",
     count: 4.5,
-    price: 240,
+    price: 250,
     discount: 260,
-    percentage: -30,
+    percentage: 30,
   },
   newArrival4: {
     img: arrival4Img,

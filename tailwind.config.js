@@ -6,9 +6,15 @@ export default {
   ],
   theme: {
     fontFamily:{
-      "satoshi":["Satoshi", "sans-serif"]
+      "satoshi":["Satoshi", "sans-serif"],
+      "inter":["Inter", "sans-serif"]
     },
-    extend: {},
+  
+    extend: {
+      colors:{
+        'gray':'#F2F0F1'
+      },
+    },
   },
   plugins: [],
 }

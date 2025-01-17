@@ -6,6 +6,24 @@
     font-family: "bold";
     src: url(./components/fonts/Fontspring-DEMO-integralcf-boldoblique.otf) format("opentype");
 }
+@font-face {
+    font-family: "medium";
+    src: url(./components/fonts/Fontspring-DEMO-integralcf-mediumoblique.otf) format("opentype");
+}
+@font-face {
+    font-family:"regular";
+    src: url(./components/fonts/Fontspring-DEMO-integralcf-regularoblique.otf) format("opentype");
+}
 .integral{
     font-family: "bold";
 }
+.integral-md{
+    font-family: "medium";
+    font-weight: 400;
+}
+
+.integral-regular{
+    font-family: "regular";
+    font-weight: 300;
+}
+
