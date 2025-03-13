@@ -1,7 +1,10 @@
 import { arrival2Img, arrival3Img, arrival4Img, arrivalOneImg, topselling1Img, topselling2Img, topselling3Img, topselling4Img } from "../assets";
 
 export const
- arrival = {
+casual="casual",
+topselling="topselling",
+newarrival="newarrival",
+ Allproduct = {
   newarrival1: {
     img: arrivalOneImg,
     title: "Sleeve Striped T-shirt",
@@ -9,12 +12,14 @@ export const
     price: 130,
     discount: 160,
     percentage: 30,
+    showIn:[casual,newarrival]
   },
   newArrival2: {
     img: arrival2Img,
     title: "Checkered Shirt",
     count: 3.5,
     price: 180,
+    showIn:[casual,newarrival]
   },
   newArrival3: {
     img: arrival3Img,
@@ -23,42 +28,45 @@ export const
     price: 250,
     discount: 260,
     percentage: 30,
+    showIn:[casual,newarrival]
   },
   newArrival4: {
     img: arrival4Img,
     title: "T-shirt with tape details",
     count: 4,
     price: 120,
+    showIn:[casual,newarrival]
   },
-},
-topselling={
-    topselling1:{
-        img:topselling1Img,
-        title:"faded skinny jeans",
-        count:4.5,
-        price:210
-    },
-    topselling2:{
-        img:topselling2Img,
-        title:"Loose fit Bermuda shorts",
-        count:3,
-        price:80
-    },
-    topselling3:{
-        img:topselling3Img,
-        title:"Courage Graphic T-shirt",
-        count:4,
-        price:145
-    },
-    topselling4:{
-        img:topselling4Img,
-        title:"Vertical Striped Shirt",
-        count:4.5,
-        price:212,
-        discount:232,
-        percentage:20
-    }
-
+  topselling1:{
+    img:topselling1Img,
+    title:"faded skinny jeans",
+    count:4.5,
+    price:210,
+   showIn:[casual,topselling]
+  },
+  topselling2:{
+      img:topselling2Img,
+      title:"Loose fit Bermuda shorts",
+      count:3,
+      price:80,
+      showIn:[casual,topselling]
+  },
+  topselling3:{
+      img:topselling3Img,
+      title:"Courage Graphic T-shirt",
+      count:4,
+      price:145,
+      showIn:[casual,topselling]
+  },
+  topselling4:{
+      img:topselling4Img,
+      title:"Vertical Striped Shirt",
+      count:4.5,
+      price:212,
+      discount:232,
+      percentage:20,
+    showIn:[casual,topselling]
+  },
 },
 testimony={
   testimony1:{
@@ -93,6 +101,53 @@ testimony={
   }
 
 },
-arrivals = Object.keys(arrival).map((key) => arrival[key]),
-topsell=Object.keys(topselling).map((key)=>topselling[key]),
-testimonials=Object.keys(testimony).map((key)=>testimony[key])
+Reviews={
+  review1:{
+     count:4,
+     name:"Samantha D.",
+     desc:"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+     posted:"August 13,2024"
+
+  },
+  review2:{
+    count:4.5,
+    name:"Alex M.",
+    desc:"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt.",
+    posted:"August 14,2024"
+
+  },
+  review3:{
+   count:3.5,
+   name:"Ethan R.",
+   desc:"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+   posted:"August 13,2024"
+
+  },
+  review4:{
+    count:4.5,
+    name:"Olivier P.",
+    desc:"This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+    posted:"August 15,2024"
+
+  },
+  review5:{
+    count:4,
+    name:"Liam K.",
+    desc:"This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion.",
+    posted:"August 14,2024"
+
+  },
+  review6:{
+    count:5,
+    name:"Ava H.",
+    desc:"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt.",
+    posted:"August 19,2024"
+
+ }
+},
+allproduct=Object.keys(Allproduct).map((key)=>Allproduct[key]),
+arrivals=allproduct.filter((product)=>product.showIn.includes(newarrival)),
+topsell=allproduct.filter((product)=>product.showIn.includes(topselling)),
+testimonials=Object.keys(testimony).map((key)=>testimony[key]),
+casualdress=allproduct.filter((product)=>product.showIn.includes(casual)),
+review=Object.keys(Reviews).map((key)=>Reviews[key])

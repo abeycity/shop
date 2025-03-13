@@ -12,7 +12,8 @@ export default {
   
     extend: {
       colors:{
-        'gray':'#F2F0F1'
+        'gray':'#F2F0F1',
+        'btn-pri':'#F0F0F0'
       },
     },
   },
