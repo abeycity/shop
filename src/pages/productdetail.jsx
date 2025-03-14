@@ -46,15 +46,23 @@ const Productdetail = () => {
         )
     }
   return (
-    <div className="flex justify-center px-16 w-full">
+    <div className="flex justify-center py-8 px-16 w-full">
         <div>
-            <div className="flex justify-between gap-6">
-                <section className="flex justify-end w-full">
-                {/*  */}
-                
-                    {/*  */}
-                    <div className="rounded-xl overflow-hidden">
-                    <img src={items.img} alt={items.title} />
+            <div className="flex justify-between items-end pb-4 ">
+                <section className="flex items-end gap-4 w-full">
+                    <div className="space-y-3">
+                        <div className="rounded-xl border overflow-hidden">
+                          <img src={items.img} alt={items.title} width={130}/>
+                        </div> 
+                        <div className="rounded-xl border overflow-hidden">
+                          <img src={items.img} alt={items.title}  width={130}/>
+                        </div>  
+                        <div className="rounded-xl border overflow-hidden">
+                          <img src={items.img} alt={items.title} width={130}/>
+                        </div>     
+                    </div>
+                    <div className="rounded-xl  overflow-hidden">
+                      <img src={items.img} alt={items.title} width={420}  />
                     </div>
                 </section>
                 <div>
@@ -116,7 +124,7 @@ const Productdetail = () => {
                             ref={index === 0 ? firstTabRef : null}
                             onClick={() => handleClick(index)}
                             className={`w-full p-2 outline-none ${
-                                currentTab === index ? "border-b-2 border-blue-800" : ""
+                                currentTab === index ? "border-b-2 border-black  text-black font-bold " : "text-slate-500 border-slate-400"
                             }`}
                             >
                             {item.header}

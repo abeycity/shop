@@ -7,7 +7,7 @@ import ReactStars from 'react-rating-stars-component'
 const RatingTab = () => {
   return (
     <div>
-      <section className="flex justify-between items-center p-4">
+      <section className="flex justify-between items-center px-4 py-6">
         <div>
           <h3 className="integral-md text-xl tracking-wide">All Reviews  <span className="font-satoshi text-sm font-light">(10)</span></h3>
         </div>
@@ -24,7 +24,7 @@ const RatingTab = () => {
         
         </div>
       </section>
-      <section>
+      <section className="py-4 space-y-10">
         <div className="grid grid-cols-2 gap-6">
 
           {
@@ -42,22 +42,22 @@ const RatingTab = () => {
                   <RxBorderDotted  fontSize={30}  className="opacity-60"/>
 
               </div>
-              <div>
-                <article>
+              <div className="space-y-6">
+                <article className="space-y-4">
                   <div className="flex items-center gap-2">
                     <h3 className="font-inter font-semibold ">{name}</h3>
                     <IoCheckmarkCircle  fontSize={24}/>
                   </div>
-                  <blockquote>{desc}</blockquote>
+                   <p className="text-black opacity-90 font-satoshi text-md font-light">&quot;{desc}&quot;</p>
                 </article>
-                <p>Posted on {posted}</p>
+                <p className="text-black opacity-60 font-satoshi text-md">Posted on {posted}</p>
               </div>
             </div>
             )
           }
         </div>
         <center>
-          <button>Load more Review</button>
+          <button className="border rounded-full border-slate-300 px-10 py-3 ring-2 ring-white font-inter font-medium">Load more Review</button>
         </center>
       </section>
     </div>

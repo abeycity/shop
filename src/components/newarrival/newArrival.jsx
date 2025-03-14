@@ -8,7 +8,7 @@ const NewArrival = () => {
           <center className="text-2xl md:text-5xl integral">New Arrivals</center>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
            {  arrivals.map(({img,price,count,title,discount,percentage},index)=>
-             <Link key={index} to={`shop/${title}`}>
+             <Link key={index} to={`product/${title}`}>
              
               <div  className="flex flex-col gap-4">
                   <div> <img src={img} alt={title}  className="rounded-xl" /></div>
