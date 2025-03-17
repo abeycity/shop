@@ -5,14 +5,15 @@ import { Link } from 'react-router-dom'
 
 const Shopitems = () => {
   return (
-    <div>
-       <div className="flex flex-col gap-4">
-        <div>
-          <h3></h3>
-          <div>
-            <p>Showing 1-10 of total products</p>
-            <div>
-              <p>Sort by:</p>
+    <div >
+
+      <div className="flex flex-col gap-4">
+        <div className='flex justify-between items-center space-y-6 pb-2'>
+          <h3 className='font-satoshi text-2xl font-semibold '>Casual</h3>
+          <div className='flex items-center gap-2'>
+            <p className='font-satoshi font-light text-slate-500'>Showing 1-10 of total products</p>
+            <div className='flex items-center'>
+              <p className='font-satoshi font-light text-slate-500'>Sort by:</p>
                <select name="" id="">
                 <option value="">most popular</option>
                 <option value="">most recent</option>

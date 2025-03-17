@@ -1,7 +1,13 @@
 
 const Filter = () => {
   return (
-    <div>Filter</div>
+    <div>
+      <div> </div>
+       <section></section>
+       <section></section>
+       <section></section>
+       <section></section>
+    </div>
   )
 }
 
